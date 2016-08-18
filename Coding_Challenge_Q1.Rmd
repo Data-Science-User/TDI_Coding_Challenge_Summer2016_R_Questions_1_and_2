@@ -9,7 +9,8 @@
 ## After each move, take the S sum of numbers, and record the amount of T moves
 ## Calculate modulotr operator by S mod T (remainder from S/T)
 
-Function that simulates the problem
+## Function that simulates the problem
+
 T = list() # Counter of the number of moves
 list_keys = list() # list of keys landed
 List_of_Moves = list("0" = list(4,6), "1" = list(6,8), "2" = list(7,9), 
