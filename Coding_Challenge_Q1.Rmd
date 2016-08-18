@@ -1,7 +1,7 @@
 ### The knight makes TT jumps to other keys according to its allowable moves (so that from each key it has two or three allowable moves). The knight chooses amongst the allowable moves uniformly at random and keeps track of the running sum SS of keys on which it lands. We are interested in SS under the modulo operator.
 
 ### Function that simulates the problem
-#### T = list() # Counter of the number of moves
+T = list() # Counter of the number of moves
 list_keys = list() # list of keys landed
 List_of_Moves = list("0" = list(4,6), "1" = list(6,8), "2" = list(7,9), 
                      "3" = list(4,8), "4" = list(3,9,0), "6" = list(1,7,0), 
