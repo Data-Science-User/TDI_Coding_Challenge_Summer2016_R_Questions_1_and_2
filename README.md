@@ -1,2 +1,2 @@
 # TDI_Coding_Challenge_Summer2016_R_Questions_1_and_2
-## Using R
+## R was used to completed these assignments
