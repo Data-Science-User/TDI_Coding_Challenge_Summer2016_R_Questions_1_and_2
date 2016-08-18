@@ -1,15 +1,15 @@
-# The knight makes TT jumps to other keys according to its allowable moves 
-# (so that from each key it has two or three allowable moves). 
-# The knight chooses amongst the allowable moves uniformly at random and 
-# keeps track of the running sum SS of keys on which it lands. 
-# We are interested in SS under the modulo operator.
+## The knight makes TT jumps to other keys according to its allowable moves 
+## (so that from each key it has two or three allowable moves). 
+## The knight chooses amongst the allowable moves uniformly at random and 
+## keeps track of the running sum SS of keys on which it lands. 
+## We are interested in SS under the modulo operator.
 
-# Start at 0
-# If any number 0-9,then conditionally and randomly sample from a subset from 0-9
-# After each move, take the S sum of numbers, and record the amount of T moves
-# Calculate modulotr operator by S mod T (remainder from S/T)
+## Start at 0
+## If any number 0-9,then conditionally and randomly sample from a subset from 0-9
+## After each move, take the S sum of numbers, and record the amount of T moves
+## Calculate modulotr operator by S mod T (remainder from S/T)
 
-## Function that simulates the problem
+Function that simulates the problem
 T = list() # Counter of the number of moves
 list_keys = list() # list of keys landed
 List_of_Moves = list("0" = list(4,6), "1" = list(6,8), "2" = list(7,9), 
@@ -25,7 +25,7 @@ sim <- function(init = "0", size) {
 Sum_keys = sum(unlist(list_keys))      # Sum of the keys landed
 Sum_keys %% 10
 
-## Q1: After T=10 moves, what is the expected value of the quantity of S mod 10?
+Q1: After T=10 moves, what is the expected value of the quantity of S mod 10?
 x = replicate(1000000, {sum(sim(init = "0", size = 10)) %% 10})
 
 prop.table(table(x))
@@ -36,7 +36,8 @@ p <- c(0.082710, 0.111331, 0.093211, 0.110218, 0.085769, 0.117118,
        0.085703, 0.109429, 0.092786,0.111725)
 
 weighted.mean(y,p) # 4.585107
-## After 10 moves, the expected value of S mod 10 is 4.585107.
+
+After 10 moves, the expected value of S mod 10 is 4.585107.
 
 ## Q2: After T=10 moves, what is the standard deviation of the quantity of S mod 10?
 sd(x) # 2.861564
