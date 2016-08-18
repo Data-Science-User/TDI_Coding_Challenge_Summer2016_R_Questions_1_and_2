@@ -1,31 +1,13 @@
+## The knight makes TT jumps to other keys according to its allowable moves 
+## (so that from each key it has two or three allowable moves). 
+## The knight chooses amongst the allowable moves uniformly at random and 
+## keeps track of the running sum SS of keys on which it lands. 
+## We are interested in SS under the modulo operator.
 
-
-# 1 2	3
-# 4	5	6
-# 7	8	9
-#   0	
-
-
-# The knight makes TT jumps to other keys according to its allowable moves 
-# (so that from each key it has two or three allowable moves). 
-# The knight chooses amongst the allowable moves uniformly at random and 
-# keeps track of the running sum SS of keys on which it lands. 
-# We are interested in SS under the modulo operator.
-
-# Start at 0
-# If any number 0-9,then conditionally and randomly sample from a subset from 0-9
-# After each move, take the S sum of numbers, and record the amount of T moves
-# Calculate modulotr operator by S mod T (remainder from S/T)
-
-# 0, then 4 or 6
-# 1, then 6 or 8
-# 2, then 7 or 9
-# 3, then 4 or 8
-# 4, then 3 or 9 or 0
-# 6, then 1 or 7 or 0
-# 7, then 2 or 6
-# 8, then 1 or 3
-# 9, then 2 or 4
+## Start at 0
+## If any number 0-9,then conditionally and randomly sample from a subset from 0-9
+## After each move, take the S sum of numbers, and record the amount of T moves
+## Calculate modulotr operator by S mod T (remainder from S/T)
 
 T = list() # Counter of the number of moves
 list_keys = list() # list of keys landed
