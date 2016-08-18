@@ -1,5 +1,4 @@
-### The knight makes TT jumps to other keys according to its allowable moves (so that from each key it has two or three
-### allowable moves). The knight chooses amongst the allowable moves uniformly at random and keeps track of the running sum SS of keys ### on which it lands. We are interested in SS under the modulo operator.
+### The knight makes TT jumps to other keys according to its allowable moves (so that from each key it has two or three allowable moves). The knight chooses amongst the allowable moves uniformly at random and keeps track of the running sum SS of keys on which it lands. We are interested in SS under the modulo operator.
 
 ### Function that simulates the problem
 T = list() # Counter of the number of moves
